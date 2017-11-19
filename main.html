@@ -4,43 +4,47 @@
 <style>
     @import url('public/css/main.css');
 </style>
+
+<title>Home</title>
+
 <body>
-<h1>StockIt</h1>
+<a href="main.html"><img src="img/logo.png" class="logo" alt="logo"/></a>
 <h4>Welcome Guest!</h4>
 
 <button class="button button1" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+<section>
 <form>
-  <input type="text" name="search" placeholder="Search for a stock">
+  <input type="text" class="search" name="search" placeholder="Search for a stock">
 </form>
 <h3>Might interest you</h3>
 <div class="dropdown">
 <button onclick="dropdown()" class="dropbtn">APPL Apple inc <strong>BUY</strong></button>
   <div id="myDropdown" class="dropdown-content">
-    <a href="#content">moving average: 1 </br> moving average: 1</a>
+    <a href="#content">moving average: 1 <br> moving average: 1</a>
   </div>
 </div>
-</br>
+<br>
 <div class="dropdown">
 <button onclick="dropdown1()" class="dropbtn">AMZN Amazon <strong>SELL</strong></button>
   <div id="myDropdown1" class="dropdown-content">
-    <a href="#content">moving average: 1 </br> moving average: 1</a>
+    <a href="#content">moving average: 1 <br> moving average: 1</a>
   </div>
 </div>
-</br>
+<br>
 <div class="dropdown">
 <button onclick="dropdown2()" class="dropbtn">GOOG Google inc <strong>HOLD</strong></button>
   <div id="myDropdown2" class="dropdown-content">
-    <a href="#content">moving average: 1 </br> moving average: 2</a>
+    <a href="#content">moving average: 1 <br> moving average: 2</a>
   </div>
 </div>
-
+</section>
 <div id="id01" class="modal">
   
   <form class="modal-content animate" action="/action_page.php">
     
     <div class="container">
       <label><b>Username</b></label>
-      <input type="login" placeholder="Enter Username" name="uname" required>
+      <input type="text" placeholder="Enter Username" name="uname" required>
 
       <label><b>Password</b></label>
       <input type="password" placeholder="Enter Password" name="psw" required>
