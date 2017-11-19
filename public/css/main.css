@@ -183,3 +183,10 @@ section {
 	left: 50px;
 	top: 100px;
 }
+/*log out*/
+.logout {
+	position: absolute;
+	right: 100px;
+	top: 60px;
+}
+
