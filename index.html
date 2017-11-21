@@ -1,65 +1,62 @@
 <!DOCTYPE html>
 <html>
-
-<style>
-    @import url('public/css/main.css');
-</style>
-
-<title>Home</title>
+<head>
+    <title>StockIt</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="vendor/css/font-awesome.min.css">
+    <link rel="stylesheet" href="public/css/main.css">
+</head>
 
 <body>
-<a href="index.html"><img src="img/logo.png" class="logo" alt="logo"/></a>
-<h4>Welcome Guest!</h4>
+<nav>
+    <div></div>
+    <a class="logo" href="#">
+        StockIt
+    </a>
+    <a class="login" href="loggedin.html">Sign Up / In</a>
+</nav>
 
-<button class="button button1" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-<section>
-<form>
-  <input type="text" class="search" name="search" placeholder="Search for a stock">
-</form>
-<h3>Might interest you</h3>
-<div class="dropdown">
-<button onclick="dropdown()" class="dropbtn">APPL Apple inc <strong>BUY</strong></button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="#content">moving average: 1 <br> moving average: 1</a>
-  </div>
-</div>
-<br>
-<div class="dropdown">
-<button onclick="dropdown1()" class="dropbtn">AMZN Amazon <strong>SELL</strong></button>
-  <div id="myDropdown1" class="dropdown-content">
-    <a href="#content">moving average: 1 <br> moving average: 1</a>
-  </div>
-</div>
-<br>
-<div class="dropdown">
-<button onclick="dropdown2()" class="dropbtn">GOOG Google inc <strong>HOLD</strong></button>
-  <div id="myDropdown2" class="dropdown-content">
-    <a href="#content">moving average: 1 <br> moving average: 2</a>
-  </div>
-</div>
+<section class="main-content">
+    <input type="text" class="search search-box" name="search" placeholder="Search for a stock">
+    <article class="search-results">
+        <h3 class="search-results-title">Might interest you</h3>
+
+        <div class="dropdown result" onclick="dropdown()">
+            <p> Icon </p>
+            <p> AMZN </p>
+            <p> Amazon </p>
+            <div class="btn-dropdown">
+                <p><strong>SELL</strong></p>
+                <p> Ind. </p>
+            </div>
+
+
+            <div id="myDropdown" class="dropdown-content">
+                <p>moving average: 1 <br> moving average: 1</p>
+            </div>
+        </div>
+        <br>
+        <div class="dropdown result" onclick="dropdown1()">
+            <p> AMZN </p>
+            <p> Amazon </p>
+            <p><strong>SELL</strong></p>
+
+            <div id="myDropdown1" class="dropdown-content">
+                <p>moving average: 1 <br> moving average: 1</p>
+            </div>
+        </div>
+        <br>
+        <div class="dropdown result" onclick="dropdown2()">
+            <p> AMZN </p>
+            <p> Amazon </p>
+            <p><strong>SELL</strong></p>
+            <div id="myDropdown2" class="dropdown-content">
+                <p>moving average: 1 <br> moving average: 2</p>
+            </div>
+        </div>
+    </article>
 </section>
-<div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="/action_page.php">
-    
-    <div class="container">
-      <label><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-        
-      <button onclick="location.href = 'loggedin.html';" type="submit">Login</button>
-      <input type="checkbox" checked="checked"> Remember me
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
-
+<!-- Scripts -->
 <script src="src/main.js"></script>
 
 </body>
