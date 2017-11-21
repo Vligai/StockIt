@@ -2,6 +2,13 @@
 @import url('https://fonts.googleapis.com/css?family=Andika|Bungee+Shade');
 
 /* Base font */
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x:  hidden;
+}
+
 body {
     font-family: 'Andika', sans-serif;
 }
@@ -37,7 +44,8 @@ nav > a {
 /* Main content */
 
 section.main-content {
-    width: 40%;
+    width: 60%;
+    height: calc(100% - 300px);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -54,15 +62,12 @@ section.main-content {
     box-sizing: border-box;
     border: 0;
     border-radius: 2px;
-
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-
     background-color: white;
     background-image: url('../../img/searchicon.png');
     background-position: 90% 10px;
     background-repeat: no-repeat;
     padding: 8px 16px;
-
     font-size: 16px;
     font-family: 'Andika', sans-serif;
     color: black;
@@ -82,24 +87,66 @@ section.main-content {
     font-style: normal;
 }
 
+/* Results */
 .search-results .result {
+    width: 90%;
+}
+
+.search-results .result .content {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    width: 90%;
     padding: 2px 16px;
     border-radius: 2px;
     background: rgba(255, 255, 255, 0.50);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    align-items:  center;
 }
 
-.search-results .result:hover {
+.search-results .result .content:hover {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25), 0 2px 6px rgba(0, 0, 0, 0.22);
 }
 
-.search-results .result .btn-dropdown {
+.search-results .result .content .icon {
+    background-repeat: no-repeat;
+    height: 24px;
+    width: 24px;
+    background-size: cover;
+}
+
+.search-results .result .content .icon.buy {
+    background-image: url('/img/green-triangle.png');
+    background-color: white;
+}
+
+.search-results .result .content .icon.sell {
+    background-image: url('/img/red-triangle.png');
+}
+
+.search-results .result .content .icon.hold {
+    background-image: url('/img/black-rect.png');
+}
+
+.btn-dropdown {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-dropdown * {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.dropdown.open .btn-dropdown .icon:before {
+    font-family: 'FontAwesome';
+    content: "\f077";
+}
+
+.dropdown.closed .btn-dropdown .icon:before {
+    font-family: 'FontAwesome';
+    content: "\f078";
 }
 
 span.psw {
