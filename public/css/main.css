@@ -1,6 +1,25 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Andika|Bungee+Shade');
+
+
+/* Base font */
+body {
+    font-family: 'Andika', sans-serif;
+}
+
+nav > a {
+    color: black;
+    text-decoration: none;
+}
+
+.logo {
+    font-family: 'Bungee Shade', cursive;
+    font-size: 2.5rem;
+}
+
 
 /* Full-width input fields */
-input[type=text], input[type=password] {
+input[type=text] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -19,16 +38,17 @@ button {
     cursor: pointer;
     width: 100%;
 }
+
 .button1 {
-	position: absolute;
-	top: 20px;
-	right: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
 h4 {
-	position: absolute;
-	right: 100px;
-	top: 20px;
+    position: absolute;
+    right: 100px;
+    top: 20px;
 }
 
 button:hover {
@@ -46,8 +66,6 @@ button:hover {
     padding: 16px;
 }
 
-
-
 span.psw {
     float: right;
     padding-top: 16px;
@@ -63,8 +81,8 @@ span.psw {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
     padding-top: 60px;
 }
 
@@ -91,6 +109,7 @@ span.psw {
     color: red;
     cursor: pointer;
 }
+
 input[class=search] {
     width: 300px;
     box-sizing: border-box;
@@ -98,9 +117,9 @@ input[class=search] {
     border-radius: 4px;
     font-size: 16px;
     background-color: white;
-	display:block;
+    display: block;
     background-image: url('../../img/searchicon.png');
-    background-position: 10px 10px; 
+    background-position: 10px 10px;
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
 }
@@ -112,25 +131,35 @@ input[class=search] {
 }
 
 @-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)} 
-    to {-webkit-transform: scale(1)}
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
 }
-    
+
 @keyframes animatezoom {
-    from {transform: scale(0)} 
-    to {transform: scale(1)}
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
 }
 
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
     span.psw {
-       display: block;
-       float: none;
+        display: block;
+        float: none;
     }
+
     .cancelbtn {
-       width: 100%;
+        width: 100%;
     }
 }
+
 /*stuff for dropdown*/
 .dropbtn {
     background-color: #ffffff;
@@ -141,6 +170,7 @@ input[class=search] {
     background-color: lightgrey;
     cursor: pointer;
 }
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -152,7 +182,7 @@ input[class=search] {
     background-color: #f9f9f9;
     min-width: 160px;
     overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
@@ -163,30 +193,38 @@ input[class=search] {
     display: block;
 }
 
-.dropdown a:hover {background-color: #f1f1f1}
+.dropdown a:hover {
+    background-color: #f1f1f1
+}
 
-.show {display:block;}
+.show {
+    display: block;
+}
+
 /*user icon*/
 .usericon {
-	position: absolute;
-	right: 50px;
-	top: 30px;
+    position: absolute;
+    right: 50px;
+    top: 30px;
 }
+
 .logo {
-	position: absolute;
-	left: 50px;
-	top: 30px;
+    position: absolute;
+    left: 50px;
+    top: 30px;
 }
+
 /*move section down*/
 section {
-	position: absolute;
-	left: 50px;
-	top: 100px;
+    position: absolute;
+    left: 50px;
+    top: 100px;
 }
+
 /*log out*/
 .logout {
-	position: absolute;
-	right: 100px;
-	top: 60px;
+    position: absolute;
+    right: 100px;
+    top: 60px;
 }
 
