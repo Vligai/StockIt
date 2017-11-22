@@ -21,7 +21,7 @@ function makeResultHTML(data) {
             <section class="content">
                 <div class="icon ${iconClass}"></div>
                 <p> ${data["Ticker"]} </p>
-                <p> ${data["Current Price"]} </p>
+                <p> $${data["Current Price"]} </p>
                 <div class="btn-dropdown">
                     <p><strong>${data["Recommendation"]}</strong></p>
                     <div class="icon"></div>
@@ -48,15 +48,15 @@ function makeResultHTML(data) {
                     </p>
                     <p class="data-row">
                         <span class="data-head">50-day MA:</span>
-                        ${data["Relative Volume"]}
+                        $${data["50-day MA"]}
                     </p>
                     <p class="data-row">
-                        <span class="data-head">200-day MA Volume:</span>
-                        ${data["Relative Volume"]}
+                        <span class="data-head">200-day MA:</span>
+                        $${data["200-day MA"]}
                     </p>
                     <p class="data-row">
                         <span class="data-head">Price Target:</span>
-                        ${data["Price Target"]}
+                        $${data["Price Target"]}
                     </p>
                     <p class="data-row">
                         <span class="data-head">Time Horizon:</span>
