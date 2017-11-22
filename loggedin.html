@@ -1,42 +1,40 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>Welcome - StockIt</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="vendor/css/font-awesome.min.css">
+    <link rel="stylesheet" href="public/css/main.css">
+    <link rel="stylesheet" href="public/css/loggedin.css">
+</head>
 
-<style>
-    @import url('public/css/main.css');
-</style>
-    <title>Logged In</title>
-<body>
-<a href="loggedin.html"><img src="img/logo.png" class="logo" alt="logo"/></a>
-<a href="portfolio.html"><img src="img/user.png" class="usericon" width="40" height="40" alt="usericon"/></a>
-<a href="index.html" class="logout">log out</a>
-<h4>Welcome User</h4>
-<section>
-<form>
-  <input type="text" class="search" name="search" placeholder="Search for a stock">
-</form>
-<h3>Your Recommendations</h3>
-<div class="dropdown">
-<button onclick="dropdown()" class="dropbtn">APPL Apple inc <strong>BUY</strong></button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="#content">moving average: 1 <br> moving average: 1</a>
-  </div>
-</div>
-<br>
-<div class="dropdown">
-<button onclick="dropdown1()" class="dropbtn">AMZN Amazon <strong>SELL</strong></button>
-  <div id="myDropdown1" class="dropdown-content">
-    <a href="#content">moving average: 1 <br> moving average: 1</a>
-  </div>
-</div>
-<br>
-<div class="dropdown">
-<button onclick="dropdown2()" class="dropbtn">GOOG Google inc <strong>HOLD</strong></button>
-  <div id="myDropdown2" class="dropdown-content">
-    <a href="#content">moving average: 1 <br> moving average: 2</a>
-  </div>
-</div>
+<body onload="init()">
+<nav>
+    <a class="logo" href="#">
+        StockIt
+    </a>
+    <a class="login" href="#">
+        <p>Jeremy</p>
+        <img src="img/user.png" class="user-icon" alt="User icon"/>
+    </a>
+</nav>
+<section class="main-content">
+    <input type="text" class="search search-box" name="search" placeholder="Search for a stock">
+    <article class="search-results">
+        <h3 class="search-results-title">Might interest you</h3>
+
+        <div id="results" class="results-container">
+
+        </div>
+    </article>
 </section>
-<script src="src/main.js"></script>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.3.6/papaparse.min.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="src/main.js" type="text/javascript"></script>
 </body>
 
 </html>
