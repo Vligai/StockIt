@@ -1,5 +1,16 @@
+function isDropdownContentClick(event) {
+  for (let p of event.path) {
+    if (p.className && p.className.includes("dropdown-content")) {
+      return true;
+    }
+  }
+  return false;
+}
+
 function toggleDropDown(event) {
-  console.log(event.currentTarget);
+  if (isDropdownContentClick(event)) {
+    return;
+  }
   $(event.currentTarget).toggleClass("closed");
 }
 
@@ -88,21 +99,47 @@ function loadData() {
   });
 }
 
+const throttle = (function () {
+  let timer = 0;
+  return (callback, ms) => {
+    clearTimeout(timer);
+    timer = setTimeout(callback, ms);
+  };
+})();
+
 
 let recommendations = [];
 let filteredRecs = [];
 let resultsContainer;
+let searchBox;
+let lastSearch;
 
 function init() {
   resultsContainer = $("#results");
+  searchBox = $(".search-box");
+  searchBox.keyup(() => throttle(search, 500));
+
   loadData()
       .then((results) => {
         recommendations = results.data;
+        return recommendations;
       }).then(renderData);
 }
 
-function renderData() {
-  for (let rec of recommendations) {
+function search() {
+  let searchText = searchBox.val();
+  if (searchText !== lastSearch) {
+    lastSearch = searchText;
+    filteredRecs = recommendations.filter((rec) => {
+      return rec["Ticker"].toLowerCase().includes(searchText.toLowerCase());
+    });
+    renderData(filteredRecs);
+  }
+}
+
+function renderData(recs) {
+  resultsContainer.empty();
+  for (let rec of recs) {
     resultsContainer.append(makeResultHTML(rec));
   }
 }
