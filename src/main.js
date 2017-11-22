@@ -68,7 +68,7 @@ function makeResultHTML(data) {
                     </p>
                     <p class="data-row">
                         <span class="data-head">Risk Reward:</span>
-                        ${data["Risk Reward"]}
+                        ${data["Risk:Reward"]}
                     </p>
                 </article>
                 <article class="description">
