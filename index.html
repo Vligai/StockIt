@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="public/css/main.css">
 </head>
 
-<body>
+<body onload="init()">
 <nav>
     <div></div>
     <a class="logo" href="#">
@@ -21,25 +21,55 @@
     <article class="search-results">
         <h3 class="search-results-title">Might interest you</h3>
 
-        <div class="dropdown result open" onclick="dropdown()">
-            <section class="content">
-                <div class="icon buy"></div>
-                <p> AMZN </p>
-                <p> $125.81 </p>
-                <div class="btn-dropdown">
-                    <p><strong>SELL</strong></p>
-                    <div class="icon"></div>
-                </div>
-            </section>
-            <section class="dropdown-content">
-
-            </section>
+        <div id="results" class="results-container">
+            <!--<div class="dropdown result open" onclick="toggleDropDown(event)">-->
+                <!--<section class="content">-->
+                    <!--<div class="icon buy"></div>-->
+                    <!--<p> AMZN </p>-->
+                    <!--<p> $125.81 </p>-->
+                    <!--<div class="btn-dropdown">-->
+                        <!--<p><strong>SELL</strong></p>-->
+                        <!--<div class="icon"></div>-->
+                    <!--</div>-->
+                <!--</section>-->
+                <!--<section class="dropdown-content">-->
+                    <!--<article class="data">-->
+                        <!--<h3 class="title">Stats</h3>-->
+                        <!--<p class="data-row">-->
+                            <!--<span class="data-head">Current Volume:</span>-->
+                            <!--1300000-->
+                        <!--</p>-->
+                        <!--<p class="data-row">-->
+                            <!--<span class="data-head">90-Day Volume:</span>-->
+                            <!--1300000-->
+                        <!--</p>-->
+                        <!--<p class="data-row">-->
+                            <!--<span class="data-head">Relative Volume:</span>-->
+                            <!--0.7-->
+                        <!--</p>-->
+                    <!--</article>-->
+                    <!--<article class="description">-->
+                        <!--<h3 class="title">Why?</h3>-->
+                        <!--<p class="text">-->
+                            <!--Alibaba's earnings report came in above expectations, showing YOY growth of 40%. 'Single's-->
+                            <!--Day'-->
+                            <!--sales exceeded last year's figures by 30%, while outlooks and earnings forecasts continue to-->
+                            <!--be-->
+                            <!--upbeat for the name.-->
+                        <!--</p>-->
+                    <!--</article>-->
+                <!--</section>-->
+            </div>
         </div>
-
     </article>
 </section>
 <!-- Scripts -->
-<script src="src/main.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.3.6/papaparse.min.js" type="text/javascript"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.3.6/papaparse.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="src/main.js" type="text/javascript"></script>
 
 </body>
 </html>
