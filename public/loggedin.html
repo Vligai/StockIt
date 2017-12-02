@@ -4,7 +4,6 @@
     <title>Welcome - StockIt</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="/vendor/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/loggedin.css">
 </head>
 
@@ -18,23 +17,35 @@
         <img src="/img/user.png" class="user-icon" alt="User icon"/>
     </a>
 </nav>
-<section class="main-content">
-    <input type="text" class="search search-box" name="search" placeholder="Search for a stock">
-    <article class="search-results">
-        <h3 class="search-results-title">Might interest you</h3>
+<section class="wrapper">
+    <section class="main-content">
+        <input type="text" class="search search-box" name="search" placeholder="Search for a stock">
+        <article class="stock-list">
+            <h3 class="stock-list-title">Might interest you</h3>
 
-        <div id="results" class="results-container">
+            <div id="results" class="stocks-container">
 
-        </div>
-    </article>
+            </div>
+        </article>
+    </section>
+    <section class="portfolio-content">
+        <article class=stock-list">
+            <h3 class="stock-list-title">Your Portfolio</h3>
+
+            <div id="portfolio-stocks" class="stocks-container">
+
+            </div>
+        </article>
+    </section>
 </section>
+
 
 <!-- Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.3.6/papaparse.min.js" type="text/javascript"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
-<script src="js/main.js" type="text/javascript"></script>
+<script src="js/loggedin.js" type="text/javascript"></script>
 </body>
 
 </html>
