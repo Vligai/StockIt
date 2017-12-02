@@ -85,10 +85,11 @@ function makeResultHTML(data) {
 
 function loadData() {
   return new Promise((resolve, reject) => {
-    Papa.parse("/public/data/stocks.csv", {
+    Papa.parse("/data/stocks.csv", {
       dynamicTyping: true,
       download: true,
       header: true,
+      delimeter: ",",
       complete(res) {
         if (res.errors.length > 0) {
           reject(res);
